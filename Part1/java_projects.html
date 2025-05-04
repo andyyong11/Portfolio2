@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Andy Yong - Java Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <header>
+        <!-- Navbar will be inserted by JavaScript -->
+    </header>
+
+    <main>
+        <section>
+            <h2>Ch19Ex3: Invoice Application</h2>
+            <p><strong>Description:</strong> This Java application reads invoice data and calculates totals based on user input using object-oriented design principles. It's part of the Murach's Java Programming textbook exercises.</p>
+            
+            <p><strong>Features:</strong></p>
+            <ul>
+                <li>Encapsulates invoice data in Java classes</li>
+                <li>Uses inheritance and method overriding</li>
+                <li>Supports user input via console</li>
+                <li>Accurate sales tax and total calculation</li>
+            </ul>
+
+            <p><strong>Sample Code:</strong></p>
+            <pre>
+public class Invoice {
+    private double subtotal;
+    private double discountPercent;
+
+    public double getDiscountAmount() {
+        return subtotal * discountPercent;
+    }
+
+    public double getTotal() {
+        return subtotal - getDiscountAmount();
+    }
+}
+            </pre>
+
+            <p><strong>Demo Video:</strong></p>
+            <video width="640" height="360" controls>
+                <source src="demos/2024-12-08 00-27-44.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+
+            <p><strong>Download Project:</strong> <a href="projects/ch19ex3.zip" download>Click here to download ZIP</a></p>
+        </section>
+    </main>
+
+    
+    
+    <script src="js/navbar.js"></script>
+</body>
+</html>

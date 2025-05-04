@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andy Yong - C# Projects</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Navbar will be inserted by JavaScript -->
+    </header>
+
+    <section class="hero-section">
+        <h2>C# Projects</h2>
+        <p>Showcasing my C# web application projects developed during the CIS296 course at Southeast Technical Institute.</p>
+        <div class="tech-stack">
+            <div class="tech-badge"><img src="images/icons/c-sharp.png" alt="C#" class="icon-img">C#</div>
+            <div class="tech-badge"><i class="fab fa-microsoft" style="color: #512BD4;"></i>ASP.NET Core</div>
+            <div class="tech-badge"><i class="fas fa-code" style="color: #4a6fdc;"></i>MVC</div>
+            <div class="tech-badge"><i class="fas fa-database" style="color: #512BD4;"></i>Entity Framework</div>
+            <div class="tech-badge"><i class="fas fa-server" style="color: #CC2927;"></i>SQL Server</div>
+        </div>
+    </section>
+
+    <main>
+        <div class="projects-container">
+            <div class="project-card full-width-card">
+                <div class="project-header">
+                    <h3>SportsPro Technical Support Web App</h3>
+                </div>
+                <div class="project-content">
+                    <div>
+                        <p>SportsPro is a C# ASP.NET Core MVC web application designed to manage product registrations, customer records, incident tracking, and technician assignments. It was developed collaboratively as part of the CIS296 Advanced C# course.</p>
+
+                        <div class="features-list">
+                            <h4>Features</h4>
+                            <ul>
+                                <li>Register customers and assign product support</li>
+                                <li>Track incidents and assign technicians</li>
+                                <li>Manage support tickets through role-based dashboards</li>
+                                <li>Built with ASP.NET Core MVC and Entity Framework Core</li>
+                            </ul>
+                        </div>
+
+                        <h4>Sample Code (from Customer Controller)</h4>
+                        <pre>
+public IActionResult Register(Customer customer) {
+    if (ModelState.IsValid) {
+        context.Customers.Update(customer);
+        context.SaveChanges();
+        return RedirectToAction("Complete", customer);
+    } else {
+        return View(customer);
+    }
+}
+                        </pre>
+                    </div>
+
+                    <div>
+                        <h4>Screenshots</h4>
+                        <div class="screenshot-gallery">
+                            <div class="screenshot-item">
+                                <img src="images/Screenshot 2025-05-04 012418 copy.png" alt="SportsPro Admin Dashboard">
+                                <div class="screenshot-caption">Admin Dashboard - Manage products, technicians, customers, incidents, and registrations</div>
+                            </div>
+                            <div class="screenshot-item">
+                                <img src="images/Screenshot 2025-05-04 012453.png" alt="Product Registration Page">
+                                <div class="screenshot-caption">Product Registration Page - Register products for customers</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <a href="https://github.com/49rohan/SportsPro" class="button" target="_blank">View on GitHub <i class="fab fa-github"></i></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    
+
+    <script src="js/navbar.js"></script>
+</body>
+</html>

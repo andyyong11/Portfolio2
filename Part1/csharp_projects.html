@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andy Yong - C# Projects</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        .screenshot-gallery {
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        .screenshot-item {
+            border: 1px solid #ddd;
+            padding: 10px;
+            border-radius: 5px;
+        }
+        .screenshot-item img {
+            max-width: 100%;
+            height: auto;
+            display: block;
+            margin: 0 auto;
+        }
+        .screenshot-caption {
+            margin-top: 10px;
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <header>
+
+    </header>
+
+<main>
+    <section>
+        <h2>SportsPro Technical Support Web App</h2>
+        <p><strong>Description:</strong> SportsPro is a C# ASP.NET Core MVC web application designed to manage product registrations, customer records, incident tracking, and technician assignments. It was developed collaboratively as part of the CIS296 Advanced C# course.</p>
+
+        <p><strong>Features:</strong></p>
+        <ul>
+            <li>Register customers and assign product support</li>
+            <li>Track incidents and assign technicians</li>
+            <li>Manage support tickets through role-based dashboards</li>
+            <li>Built with ASP.NET Core MVC and Entity Framework Core</li>
+        </ul>
+
+        <p><strong>Sample Code (from Customer Controller):</strong></p>
+        <pre>
+public IActionResult Register(Customer customer) {
+    if (ModelState.IsValid) {
+        context.Customers.Update(customer);
+        context.SaveChanges();
+        return RedirectToAction("Complete", customer);
+    } else {
+        return View(customer);
+    }
+}
+        </pre>
+
+        <p><strong>Screenshots:</strong></p>
+        <div class="screenshot-gallery">
+            <div class="screenshot-item">
+                <img src="images/Screenshot 2025-05-04 012418 copy.png" alt="SportsPro Admin Dashboard">
+                <div class="screenshot-caption">Admin Dashboard - Manage products, technicians, customers, incidents, and registrations</div>
+            </div>
+            <div class="screenshot-item">
+                <img src="images/Screenshot 2025-05-04 012453.png" alt="Product Registration Page">
+                <div class="screenshot-caption">Product Registration Page - Register products for customers</div>
+            </div>
+            <div class="screenshot-item">
+                <img src="images/Screenshot 2025-05-04 012513.png" alt="User Registration Form">
+                <div class="screenshot-caption">User Registration Form - Create new user accounts</div>
+            </div>
+            <div class="screenshot-item">
+                <img src="images/Screenshot 2025-05-04 012523.png" alt="Login Page">
+                <div class="screenshot-caption">Login Page - Secure authentication for users</div>
+            </div>
+        </div>
+
+        <p><strong>View Project on GitHub:</strong> 
+            <a href="https://github.com/49rohan/SportsPro" target="_blank">https://github.com/49rohan/SportsPro</a>
+        </p>
+    </section>
+</main>
+
+
+<script src="js/navbar.js"></script>
+</body>
+</html>

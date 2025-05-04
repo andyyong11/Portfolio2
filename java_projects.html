@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Andy Yong - Java Projects</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <!-- Navbar will be inserted by JavaScript -->
+    </header>
+
+    <section class="hero-section">
+        <h2>Java Projects</h2>
+        <p>Showcasing my Java programming projects developed during the CIS249 course at Southeast Technical Institute.</p>
+        <div class="tech-stack">
+            <div class="tech-badge"><i class="fab fa-java" style="color: #007396;"></i>Java</div>
+            <div class="tech-badge"><i class="fas fa-cubes" style="color: #4a6fdc;"></i>Object-Oriented</div>
+            <div class="tech-badge"><i class="fas fa-project-diagram" style="color: #4a6fdc;"></i>Inheritance</div>
+            <div class="tech-badge"><i class="fas fa-terminal" style="color: #333333;"></i>Console Applications</div>
+        </div>
+    </section>
+
+    <main>
+        <div class="projects-container">
+            <div class="project-card full-width-card">
+                <div class="project-header">
+                    <h3>Ch19Ex3: Invoice Application</h3>
+                </div>
+                <div class="project-content">
+                    <div>
+                        <p>This Java application reads invoice data and calculates totals based on user input using object-oriented design principles. It's part of the Murach's Java Programming textbook exercises.</p>
+                        
+                        <div class="features-list">
+                            <h4>Features</h4>
+                            <ul>
+                                <li>Encapsulates invoice data in Java classes</li>
+                                <li>Uses inheritance and method overriding</li>
+                                <li>Supports user input via console</li>
+                                <li>Accurate sales tax and total calculation</li>
+                            </ul>
+                        </div>
+
+                        <h4>Sample Code</h4>
+                        <pre>
+public class Invoice {
+    private double subtotal;
+    private double discountPercent;
+
+    public double getDiscountAmount() {
+        return subtotal * discountPercent;
+    }
+
+    public double getTotal() {
+        return subtotal - getDiscountAmount();
+    }
+}
+                        </pre>
+                    </div>
+
+                    <div class="video-container">
+                        <div class="video-player">
+                            <video controls>
+                                <source src="demos/2024-12-08 00-27-44.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-footer">
+                    <a href="projects/ch19ex3.zip" class="button" download>Download Project</a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+  
+    
+    <script src="js/navbar.js"></script>
+</body>
+</html>

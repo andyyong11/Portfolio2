@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Restaurant Management System</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600&family=Poppins:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Restaurant Management System</h1>
+        <div class="nav-buttons">
+            <a href="../Provider_1/testers/index.php" target="_blank">
+                <button>API Tester</button>
+            </a>
+        </div>
+    </header>
+
+    <!-- Categories Section -->
+    <div class="section">
+        <h2>Categories Management</h2>
+        <form id="categoryForm">
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" name="name" required placeholder="Enter category name">
+            </div>
+            <div class="form-group">
+                <label>Description:</label>
+                <textarea name="description" placeholder="Enter category description"></textarea>
+            </div>
+            <button type="submit">Create Category</button>
+        </form>
+        <div class="output" id="categoryResult"></div>
+        <h3>All Categories</h3>
+        <div class="output" id="categories"></div>
+    </div>
+
+    <!-- Menu Items Section -->
+    <div class="section">
+        <h2>Menu Items Management</h2>
+        <form id="menuForm">
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" name="name" required placeholder="Enter menu item name">
+            </div>
+            <div class="form-group">
+                <label>Price:</label>
+                <input type="number" name="price" step="0.01" required placeholder="Enter price">
+            </div>
+            <div class="form-group">
+                <label>Category:</label>
+                <select name="category_id" required id="categorySelect">
+                    <option value="">Select a category</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Description:</label>
+                <textarea name="description" placeholder="Enter menu item description"></textarea>
+            </div>
+            <div class="form-group">
+                <label>Available:</label>
+                <select name="available">
+                    <option value="1">Yes</option>
+                    <option value="0">No</option>
+                </select>
+            </div>
+            <button type="submit">Create Menu Item</button>
+        </form>
+        <div class="output" id="menuResult"></div>
+        <h3>All Menu Items</h3>
+        <div class="output" id="menuItems"></div>
+    </div>
+
+    <!-- Ingredients Section -->
+    <div class="section">
+        <h2>Ingredients Management</h2>
+        <form id="ingredientForm">
+            <div class="form-group">
+                <label>Menu Item:</label>
+                <select name="item_id" required id="menuItemSelect">
+                    <option value="">Select a menu item</option>
+                </select>
+            </div>
+            <div class="form-group">
+                <label>Name:</label>
+                <input type="text" name="name" required placeholder="Enter ingredient name">
+            </div>
+            <div class="form-group">
+                <label>Quantity:</label>
+                <input type="number" name="quantity" step="0.01" required placeholder="Enter quantity">
+            </div>
+            <div class="form-group">
+                <label>Unit:</label>
+                <input type="text" name="unit" required placeholder="Enter unit (e.g., kg, g, pieces)">
+            </div>
+            <button type="submit">Create Ingredient</button>
+        </form>
+        <div class="output" id="ingredientResult"></div>
+        <h3>All Ingredients</h3>
+        <div class="output" id="ingredients"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
