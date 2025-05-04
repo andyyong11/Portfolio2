@@ -127,7 +127,9 @@ header h1 {
     color: var(--text-primary);
     background: var(--gradient-primary);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
+    display: inline-block;
 }
 
 /* Navigation Styles */
@@ -217,6 +219,7 @@ nav ul li a.active {
     text-align: center;
     background: var(--gradient-primary);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
     display: inline-block;
 }
