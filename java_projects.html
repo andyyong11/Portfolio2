@@ -27,34 +27,41 @@
         <div class="projects-container">
             <div class="project-card full-width-card">
                 <div class="project-header">
-                    <h3>Ch19Ex3: Invoice Application</h3>
+                    <h3>Ch19Ex3: Product Manager Application</h3>
                 </div>
                 <div class="project-content">
                     <div>
-                        <p>This Java application reads invoice data and calculates totals based on user input using object-oriented design principles. It's part of the Murach's Java Programming textbook exercises.</p>
+                        <p>A JavaFX desktop application that manages product inventory with full CRUD (Create, Read, Update, Delete) functionality using a SQLite database. This application demonstrates advanced object-oriented programming concepts and database integration.</p>
                         
                         <div class="features-list">
                             <h4>Features</h4>
                             <ul>
-                                <li>Encapsulates invoice data in Java classes</li>
-                                <li>Uses inheritance and method overriding</li>
-                                <li>Supports user input via console</li>
-                                <li>Accurate sales tax and total calculation</li>
+                                <li>Modern JavaFX GUI with intuitive user controls</li>
+                                <li>Add, search, update, and delete product records</li>
+                                <li>Integrates with SQLite database for data persistence</li>
+                                <li>Input validation and error handling</li>
+                                <li>MVC architecture with separation of concerns</li>
                             </ul>
                         </div>
 
                         <h4>Sample Code</h4>
                         <pre>
-public class Invoice {
-    private double subtotal;
-    private double discountPercent;
-
-    public double getDiscountAmount() {
-        return subtotal * discountPercent;
-    }
-
-    public double getTotal() {
-        return subtotal - getDiscountAmount();
+public class ProductManagerApp extends Application {
+    // JavaFX components
+    private TextField codeField;
+    private TextField descriptionField;
+    private TextField priceField;
+    private ListView<String> productList;
+    
+    // Database operations
+    private void addProduct() {
+        Product product = new Product(
+            codeField.getText(),
+            descriptionField.getText(),
+            Double.parseDouble(priceField.getText())
+        );
+        ProductDB.add(product);
+        populateProductList();
     }
 }
                         </pre>
