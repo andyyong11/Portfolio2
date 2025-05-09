@@ -46,15 +46,15 @@
 
                         <h4>Sample Code (from Customer Controller)</h4>
                         <pre>
-public IActionResult Register(Customer customer) {
-    if (ModelState.IsValid) {
-        context.Customers.Update(customer);
-        context.SaveChanges();
-        return RedirectToAction("Complete", customer);
-    } else {
-        return View(customer);
-    }
-}
+                                public IActionResult Register(Customer customer) {
+                                    if (ModelState.IsValid) {
+                                        context.Customers.Update(customer);
+                                        context.SaveChanges();
+                                        return RedirectToAction("Complete", customer);
+                                    } else {
+                                        return View(customer);
+                                    }
+                                }
                         </pre>
                     </div>
 

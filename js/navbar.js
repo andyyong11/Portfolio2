@@ -10,6 +10,7 @@ document.addEventListener('DOMContentLoaded', function() {
             <li><a href="java_projects.html" id="nav-java">Java Projects</a></li>
             <li><a href="csharp_projects.html" id="nav-csharp">C# Projects</a></li>
             <li><a href="webservices_projects.html" id="nav-webservices">Web Services</a></li>
+            <li><a href="streamdj.html" id="nav-streamdj">StreamDJ</a></li>
             <li><a href="http://catalog.southeasttech.edu/preview_program.php?catoid=17&poid=2004&hl=%22programming%22" target="_blank">STI CIS Program</a></li>
         </ul>
     </nav>
@@ -40,6 +41,9 @@ document.addEventListener('DOMContentLoaded', function() {
             break;
         case 'webservices_projects.html':
             document.getElementById('nav-webservices').classList.add('active');
+            break;
+        case 'streamdj.html':
+            document.getElementById('nav-streamdj').classList.add('active');
             break;
     }
 }); 
